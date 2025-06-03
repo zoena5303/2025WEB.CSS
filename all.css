@@ -46,3 +46,411 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/*基本設定*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    background-color: #FBFBFB;
+}
+
+html,
+body {
+    scroll-snap-type: y;
+}
+
+.panel {
+    scroll-snap-align: start;
+    scroll-margin-top: 90px;
+}
+
+.bder {
+    border: 1px solid #6C757D;
+}
+
+/*變數*/
+:root {
+    --color-pointcolor: #0027d5;
+    --color-minorcolor: #4B4B4B;
+}
+
+/*常用*/
+.color-point {
+    color: var(--color-pointcolor);
+}
+
+.color-minor {
+    color: var(--color-minorcolor);
+}
+
+.fz-24 {
+    font-size: 24px;
+}
+
+
+
+.con-w1296 {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.pd-2400 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.pd-4800 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.pd-8012 {
+    padding: 80px 12px;
+}
+
+.pd-8048 {
+    padding: 80px 48px;
+}
+
+.pd-t90 {
+    padding-top: 90px;
+}
+
+.pd-l80 {
+    padding-left: clamp(10px, 5vw, 80px);
+}
+
+.gap-col-24 {
+    column-gap: 24px;
+}
+
+.gap-col-40 {
+    column-gap: 40px;
+}
+
+.gap-row-12 {
+    row-gap: 12px;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-rel {
+    position: relative;
+}
+
+.position-abs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.row-jcc-aic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-jcc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*nar-head*/
+.nar-head {
+    width: 100%;
+    background-color: #FBFBFB;
+    z-index: 1000;
+}
+
+.nar-head a:hover {
+    color: var(--color-pointcolor);
+}
+
+
+/*cover-img*/
+.full-h640 {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+    object-position: 65%;
+}
+
+.full-h364 {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.full-h834 {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.full-h180 {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*cover*/
+.full-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.full-card {
+    width: 636px;
+}
+
+.fz-120-900 {
+    font-size: clamp(90px, 6.5vw, 120px);
+    font-weight: 900;
+}
+
+.fz28-bold {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media (max-width: 1350px) {
+    .full-card {
+        width: 375px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pd-l80 {
+        padding-left: 24px;
+    }
+
+    .pic {
+        place-items: center;
+    }
+
+    .full-h640 {
+        height: calc(100vh - 90px - 364px);
+    }
+
+    .full-h364 {
+        height: calc(100vh - (100vh - 90px - 364px) - 90px);
+        align-items: center;
+    }
+
+    .full-h834 {
+        height: calc(100vh - 90px - 180px);
+    }
+
+    .full-h180 {
+        height: calc(100vh - (100vh - 90px - 180px) - 90px);
+    }
+
+    .full-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-card {
+        width: 351px;
+    }
+
+    .fz-120-900 {
+    font-size: 52px;
+    }
+
+}
+
+
+
+
+
+
+/*卡片網格*/
+.grid-w416 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(351px, 70vw, 416px), min-content));
+    place-content: center;
+}
+
+
+/*搜尋*/
+.card-search {
+    position: relative;
+}
+
+.search_svg {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.search_input {
+    width: 100%;
+    max-width: 416px;
+    height: 56px;
+    border: 1px solid var(--color-minorcolor);
+    border-radius: 40px;
+    padding-left: 50px;
+}
+
+
+/*卡片*/
+.card {
+    width: 100%;
+    max-width: 416px;
+}
+
+.card-img {
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.card-page {
+    row-gap: clamp(32px, 10vw, 80px);
+    margin-top: 40px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.card-text {
+    font-size: 16px;
+    margin: 8px 0 16px;
+}
+
+.text-hidden {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.underline:hover {
+    text-decoration: underline;
+}
+
+.hashtag {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 0 4px;
+}
+
+.special-tag {
+    background-color: var(--color-pointcolor);
+    color: white;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 6px 12px;
+    margin-left: 5px;
+}
+
+.special-tag:hover {
+    background-color: #758eff;
+}
+
+.btn-reading {
+    font-size: 16px;
+    width: 96px;
+    border: 1px solid var(--color-minorcolor);
+    border-radius: 40px;
+    text-align: center;
+    padding: 8px 0 9px;
+}
+
+.btn-reading:hover {
+    color: white;
+    background-color: var(--color-pointcolor);
+}
+
+
+/*分頁選單*/
+.pagination {
+    padding-top: 40px;
+}
+
+.ination {
+    width: 328px;
+    height: 56px;
+    padding: 8px 20px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.ination a:hover {
+    color: var(--color-pointcolor);
+}
+
+.pag-number {
+    display: flex;
+}
+
+.pag-number a {
+    width: 40px;
+    height: 40px;
+}
+
+
+/*footer*/
+.footer-GM {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1.2em, 1.5vw, 2em);
+}
+
+.footer-GM ul {
+    display: flex;
+    width: 236px;
+    height: 44px;
+}
+
+.footer-GM a:hover {
+    opacity: 0.5;
+}
+
+.copy {
+    height: 72px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-GM {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
